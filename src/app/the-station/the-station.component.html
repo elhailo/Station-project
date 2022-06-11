@@ -1,0 +1,35 @@
+<div class="containerOfStation">
+  <h1>La station {{station.name}}</h1>
+  <table class="tableStation">
+    <tbody>
+      <tr>
+        <td>Nom</td>
+        <td>{{station.name}}</td>
+      </tr>
+      <tr>
+        <td>Disponibilité</td>
+        <td data-label="Disponibilité" *ngIf="station.isActive"><div class="isActiveStation">Disponible</div></td>
+        <td data-label="Disponibilité" *ngIf="!station.isActive"><div class="isNotActiveStation">Indisponible</div></td></tr>
+      <tr>
+        <td>Ville</td>
+        <td>{{station.city}}</td>
+      </tr>
+      <tr>
+        <td>Date d'installation</td>
+        <td>{{station.installationDate | date:'d/M/yyyy à h:mm'}}</td>
+      </tr>
+      <tr>
+        <td>Latitude</td>
+        <td>{{station.latitude}}</td>
+      </tr>
+      <tr>
+        <td>Longitude</td>
+        <td>{{station.longitude}}</td>
+      </tr>
+      <tr>
+        <td>Firmware Version</td>
+        <td>{{station.firmwareVersion}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

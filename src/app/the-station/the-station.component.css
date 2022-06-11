@@ -1,0 +1,47 @@
+.containerOfStation{
+  margin-top: 80px;
+  width: 100%;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.containerOfStation h1{
+  margin-left: 5%;
+  padding-top: 20px;
+}
+
+.tableStation{
+  width: 90%;
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+.tableStation tbody tr td{
+  font-size: 20px;
+  font-weight: 600;
+  height: 80px;
+  border-bottom: #dedede solid 1px;
+
+}
+
+.tableStation tbody tr td:last-child{
+  font-weight: 400;
+}
+
+.tableStation tbody tr td .isActiveStation, .tableStation tbody tr td .isNotActiveStation{
+  color: #26B281;
+  position: relative;
+  width: 40%;
+  min-width: 170px;
+  background-color: #ECF9F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.tableStation tbody tr td .isNotActiveStation{
+  color: #b22626;
+  background-color: #f9ecec;
+}

@@ -1,0 +1,22 @@
+<div class="containerOfAllStation">
+  <h1>Liste des stations</h1>
+  <table class="tableStations">
+    <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Disponibilité</th>
+      <th>ville</th>
+      <th>Voir plus</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let station of stationList.$values">
+        <td data-label="Nom">{{station.name}}</td>
+        <td data-label="Disponibilité" *ngIf="station.isActive"><div class="isActiveStation">Disponible</div></td>
+        <td data-label="Disponibilité" *ngIf="!station.isActive"><div class="isNotActiveStation">Indisponible</div></td>
+        <td data-label="ville">{{station.city}}</td>
+        <td data-label="Voir plus"><a routerLink="/station-info" (click)="passStation(station)" class="btnSeeMore">Voir la station</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,142 @@
+.containerOfAllStation{
+  margin-top: 80px;
+  width: 100%;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.containerOfAllStation h1{
+  margin-left: 5%;
+  padding-top: 20px;
+}
+
+.tableStations{
+  width: 90%;
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+.tableStations thead tr{
+  margin: 0;
+  height: 60px;
+}
+
+.tableStations thead tr th{
+  font-size: 25px;
+  font-weight: 600;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+
+.tableStations tbody tr td{
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  border-bottom: 1px solid #bebebe;
+  text-align: start;
+  height: 50px;
+}
+
+.tableStations tbody tr td .isActiveStation, .tableStations tbody tr td .isNotActiveStation{
+  color: #26B281;
+  position: relative;
+  width: 40%;
+  min-width: 170px;
+  background-color: #ECF9F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.tableStations tbody tr td .isNotActiveStation{
+  color: #b22626;
+  background-color: #f9ecec;
+}
+
+.tableStations tbody tr td .btnSeeMore{
+  width: 40%;
+  min-width: 170px;
+  border-radius: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 40px;
+  display: inline-block;
+  background-color: #F2F4F8;
+  color: #3a488c;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .tableStations{
+    position: relative;
+    margin: 0 auto;
+  }
+  .tableStations thead{
+    display: none;
+  }
+  .tableStations tbody{
+  }
+  .tableStations, .tableStations tbody, .tableStations tr, .tableStations td{
+    display: block;
+  }
+
+  .tableStations tr{
+    background-color: rgba(245, 245, 245, 0.38);
+    margin-bottom: 15px;
+    border: 1px solid #dedede;
+  }
+
+  .tableStations tbody tr td{
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border-bottom: 1px solid #dedede;
+    font-size: 14px;
+    vertical-align: middle;
+    margin: auto 10px auto 0;
+    line-height: 50px;
+  }
+
+  .tableStations tbody tr td:last-child{
+    border: none;
+  }
+
+  .tableStations tbody tr td:before{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .tableStations tbody tr td:nth-child(2) div{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .tableStations tbody tr td .btnSeeMore{
+    font-size: 14px;
+    width: 150px;
+    min-width: 80px;
+  }
+
+  .tableStations tbody tr td .isActiveStation, .tableStations tbody tr td .isNotActiveStation{
+    font-size: 14px;
+    width: 150px;
+    min-width: 80px;
+  }
+}
