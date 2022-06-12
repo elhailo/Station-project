@@ -1,0 +1,36 @@
+<div class="containerFormStation" >
+  <h1>Formulaire de création de station</h1>
+  <form [formGroup]="createStationForm" (ngSubmit)="createStation()" >
+    <div class="containerInput">
+      <label>Nom de la station</label>
+      <input type="text" class="" formControlName="name">
+    </div>
+    <div class="containerInput">
+      <label>Nom de la ville</label>
+      <input type="text" class="" formControlName="city" required>
+    </div>
+    <div class="containerInput">
+      <label>Station activé</label>
+      <input type="checkbox" class="" formControlName="isActive" required>
+    </div>
+    <div class="containerInput">
+      <label>Version</label>
+      <input type="text" class="" formControlName="version" required>
+    </div>
+    <div class="containerInput">
+      <label>latitude</label>
+      <input type="number" class="" formControlName="latitude" required>
+    </div>
+    <div class="containerInput">
+      <label>longitude</label>
+      <input type="number" class="" formControlName="longitude" required>
+    </div>
+    <div class="containerInput">
+      <label>serial Number</label>
+      <input type="text" class="" formControlName="serialNumber" required>
+    </div>
+    <button type="submit" class="submitBtn">Créer la station</button>
+  </form>
+
+  <pre>{{createStationForm.value | json}}</pre>
+</div>
