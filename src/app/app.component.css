@@ -40,6 +40,9 @@ header ul li{
 header ul li:first-child{
   width: 85px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header .logo{
@@ -54,4 +57,16 @@ header ul nav a{
 
 header ul nav a:not(:last-child){
   margin-right: 15px;
+}
+
+@media screen and (max-width: 600px){
+  header ul nav a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  header .logo{
+    width: 50px;
+  }
+
 }

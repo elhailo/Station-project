@@ -1,6 +1,114 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .containerFormStation{
   margin-top: 80px;
   width: 100%;
   position: relative;
   font-family: 'Poppins', sans-serif;
+}
+
+.containerFormStation h1{
+  margin-left: 5%;
+  padding-top: 20px;
+}
+
+.containerFormStation form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.containerFormStation form button{
+  width: 90%;
+  margin: 0 auto;
+  height: 60px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #3a488c;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.containerInput{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+}
+
+.containerInput label{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #818187;
+}
+
+.containerInput input{
+  height: 60px;
+  color: #2e2d2c;
+  background-color: #F7F7F8;
+  outline: transparent 1px solid;
+  border: none;
+  font-weight: 600;
+  font-size: 17px;
+  text-indent: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.containerInput .labelActiveStation{
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row-reverse;
+  color: #2e2d2c;
+  font-weight: 600;
+  font-size: 17px;
+  height: 0px;
+  margin-bottom: 20px;
+}
+
+.checkboxDiv{
+  width: 70px;
+  height: 35px;
+  background-color: #e8e8e8;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: .4s;
+  margin-right: 10px;
+}
+
+.checkboxDiv::after{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 5%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: .4s;
+}
+
+#isActiveCheckbox:checked ~ .labelActiveStation .checkboxDiv{
+  background-color: #3a488c;
+}
+
+#isActiveCheckbox:checked ~ .labelActiveStation .checkboxDiv::after{
+  left: calc(95% - 30px);
+}
+
+.containerInput input:focus{
+  background-color: white;
+  outline: #3a488c 3px solid;
 }

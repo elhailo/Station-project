@@ -10,8 +10,11 @@
       <input type="text" class="" formControlName="city" required>
     </div>
     <div class="containerInput">
-      <label>Station activé</label>
-      <input type="checkbox" class="" formControlName="isActive" required>
+      <input id="isActiveCheckbox" type="checkbox" class="" formControlName="isActive" required hidden  >
+      <label class="labelActiveStation" for="isActiveCheckbox">
+        Station activé
+        <div class="checkboxDiv"></div>
+      </label>
     </div>
     <div class="containerInput">
       <label>Version</label>
@@ -32,5 +35,5 @@
     <button type="submit" class="submitBtn">Créer la station</button>
   </form>
 
-  <pre>{{createStationForm.value | json}}</pre>
+  <!--<pre>{{createStationForm.value | json}}</pre>-->
 </div>
