@@ -59,6 +59,7 @@ header ul nav a:not(:last-child){
   margin-right: 15px;
 }
 
+
 @media screen and (max-width: 600px){
   header ul nav a{
     text-decoration: none;

@@ -33,7 +33,7 @@ export class StationsService {
     firmwareVersion: "",
   };
 
-  nbrStation: number = 0;
+  public nbrStation: number = 0;
 
 
   constructor(private httpClient: HttpClient) { }
@@ -46,6 +46,10 @@ export class StationsService {
      this.httpClient.post(this.stations_api_url, theStation).subscribe((result)=>{
        console.log(result);
      })
+  }
+
+  refreshStationCount(nbrStation : number): void{
+    this.nbrStation = nbrStation;
   }
 
 }

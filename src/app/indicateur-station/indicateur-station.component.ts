@@ -8,15 +8,10 @@ import {StationsService} from "../stationsService/stations.service";
 })
 export class IndicateurStationComponent implements OnInit {
 
-  nombreStation: number = 0;
-
-  constructor(private stationService: StationsService) { }
+  constructor(public stationService: StationsService) { }
 
   ngOnInit(): void {
-    this.stationService.getAllStation().subscribe((data) =>{
-      console.log(data)
-      this.nombreStation = data.$values.length;
-    })
+
   }
 
 }
