@@ -16,7 +16,7 @@ app.use(compression())
 //
 // Replace the name below to match your own "defaultProject" value!
 //
-const appname = 'station-project'
+const appname = 'station'
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, '..', 'dist', appname)))
