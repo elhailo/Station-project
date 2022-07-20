@@ -19,20 +19,6 @@ export class StationsService {
 
   private stations_api_url: string = "http://ip24.ip-51-161-69.net/api/Station";
 
-  stationToSend: Stations = {
-    $id: "",
-    id: "",
-    city: "",
-    isActive: false,
-    installationDate: "",
-    latitude: 0,
-    longitude: 0,
-    name: "",
-    operatingStateDate: "",
-    updateDate: "",
-    firmwareVersion: "",
-  };
-
   public nbrStation: number = 0;
 
 

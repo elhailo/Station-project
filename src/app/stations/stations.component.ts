@@ -24,7 +24,7 @@ export class StationsComponent implements OnInit {
 
   showStation(){
     this.stationService.getAllStation().subscribe((data) =>{
-      console.log(data)
+      console.log(data);
       this.stationList = data;
       this.stationService.refreshStationCount(data.$values.length);
     })
